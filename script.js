@@ -1,8 +1,15 @@
 const grid = document.querySelector("div");
 
 for(let i=0; i<16; i++) {
-    const square = document.createElement("div");
-    square.className = "square";
+    const column = document.createElement("div");
+    column.className = "column";
+    for(let j=0; j<16; j++) {
+        const square = document.createElement("div");
+        square.className = "square";
+        //square.textContent = "ciao";
+        column.appendChild(square);
+    }
 
-    grid.appendChild(square);
+    grid.appendChild(column);
 };
+
