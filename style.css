@@ -1,17 +1,21 @@
 .grid {
+    border: 2px solid black;
     margin: auto;
     margin-top: 60px;
-    max-width: 600px;
+    max-width: 960px;
     display: flex;
 }
 
 .column {
     flex-direction: column;
-    flex: 1 0 30px;
+    flex: 1 0 10px;
 }
 
 .square {
-    border: 2px solid black;
-    margin: 2px;
     aspect-ratio: 1/1;
+}
+
+button {
+    margin: 30px;
+    font-size: 20px;
 }
