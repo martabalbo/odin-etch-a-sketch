@@ -13,3 +13,11 @@ for(let i=0; i<16; i++) {
     grid.appendChild(column);
 };
 
+const squares = document.querySelectorAll('.square');
+
+Array.from(squares).forEach((el) => {
+    el.addEventListener('mouseenter', (event) => {
+        el.style.backgroundColor = "red";
+    });
+});
+
