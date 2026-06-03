@@ -17,11 +17,18 @@ const squares = document.querySelectorAll('.square');
 
 Array.from(squares).forEach((el) => {
     el.addEventListener('mouseenter', (event) => {
-        el.style.backgroundColor = "red";
+        el.style.backgroundColor = randomRgbColor();
     });
 });
 
 const button = document.querySelector('button');
+
+const randomRgbColor = () => {
+  let r = Math.floor(Math.random() * 256); // Random between 0-255
+  let g = Math.floor(Math.random() * 256); // Random between 0-255
+  let b = Math.floor(Math.random() * 256); // Random between 0-255
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
+};
 
 button.addEventListener('click', (event) => {
     let num = prompt("Please enter a number to decide the pixel size");
@@ -54,7 +61,7 @@ button.addEventListener('click', (event) => {
 
     Array.from(squares).forEach((el) => {
         el.addEventListener('mouseenter', (event) => {
-            el.style.backgroundColor = "red";
+            el.style.backgroundColor = randomRgbColor();
         });
     }); 
 });
